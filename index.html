@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100f19">
+<title>Afterlight — Ghost in the Machine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">✳</span> AFTERLIGHT</a><div class="local-pill"><span class="pulse"></span><span id="statusText">BROWSER-BASED AI</span></div></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow"><span></span> GHOST IN THE MACHINE · OPEN-WEIGHT AI</p><h1>Some stories refuse<br>to <em>stay buried.</em></h1><p class="hero-copy">A little darkness. A forgotten voice. A story that only your imagination could summon.</p><div class="hero-line"><span>✦</span><span>CREATE SOMETHING THAT HAUNTS YOU</span><span>✦</span></div></section>
+<section class="workspace">
+<div class="form-panel">
+<div class="panel-heading"><div><span class="step">01 / THE SEED</span><h2>What lingers?</h2></div><span class="spark">✧</span></div>
+<label for="theme">Story premise</label><textarea id="theme" rows="3" maxlength="180">A forgotten train station where the last train arrives for passengers who are no longer alive</textarea>
+<div class="suggestions"><button class="chip" data-theme="A haunted radio broadcasts messages from tomorrow">Haunted radio</button><button class="chip" data-theme="A village lantern remembers every person who lived there">Village lantern</button><button class="chip" data-theme="An abandoned computer keeps receiving messages from its first user">Lost signal</button></div>
+<div class="field-row"><div class="field"><label for="mood">Atmosphere</label><select id="mood"><option>eerie and atmospheric</option><option>folk horror and ancient</option><option>melancholy and beautiful</option><option>cosmic and unsettling</option><option>playful spooky</option></select></div><div class="field"><label for="length">Story length</label><select id="length"><option value="short">Short · 1 min</option><option value="medium">Medium · 2 min</option><option value="long">Long · 4 min</option></select></div></div>
+<div class="memory-card"><div class="memory-head"><div class="memory-icon">✿</div><div><strong>Keep a memory glowing</strong><p>Optional remembrance-inspired fiction</p></div><label class="switch"><input type="checkbox" id="memoryToggle"><span></span></label></div><div id="memoryFields" class="memory-fields hidden"><label for="memoryNote">A detail, story, song, or favorite thing</label><textarea id="memoryNote" rows="2" maxlength="300" placeholder="They always left a marigold beside the window..."></textarea><small>This creates fiction; it does not contact or speak for anyone.</small></div></div>
+<button id="generate" class="generate"><span>✧</span> Summon a story <span class="arrow">↗</span></button><p class="privacy-note"><span>◉</span> AI runs in your browser after the model downloads. No prompt API call.</p>
+</div>
+<div class="story-panel"><div class="story-top"><span class="step">02 / THE OTHER SIDE</span><span class="live-dot"></span></div>
+<div id="emptyState" class="empty-state"><div class="moon">☾</div><p class="empty-kicker">THE ROOM IS LISTENING</p><h2>Your story<br>is waiting in the dark.</h2><p>Give it a name. Choose its mood.<br>Then open the door.</p><div class="ornament">— ✦ —</div></div>
+<div id="loadingState" class="loading hidden"><div class="loader"></div><p id="loadingText">Waking the machine...</p><small>The first run downloads the model into your browser cache.</small></div>
+<article id="storyOutput" class="story-output hidden"><div class="story-label">A TALE FROM AFTERLIGHT</div><h2 id="storyTitle"></h2><div id="storyText" class="story-text"></div><div class="story-bottom"><span id="engineLabel">BROWSER AI</span><button id="copyBtn" class="copy-btn">Copy story ↗</button></div></article>
+<div class="panel-foot"><span>NO OLLAMA · NO API KEY</span><span>MADE FOR THE MOONLIT HOURS</span></div></div></section>
+<section class="why"><div class="why-symbol">✳</div><div><p class="eyebrow">WHY OPEN INNOVATION?</p><h2>The machine is yours to change.</h2><p>Afterlight uses an open-weight text-generation model directly in the browser through Transformers.js. There is no Ollama installation and no hosted inference API. The model files download once, then inference runs on your device. A fallback generator keeps the demo usable if model loading fails.</p></div><div class="why-stats"><div><strong>IN-BROWSER</strong><span>INFERENCE</span></div><div><strong>OPEN</strong><span>MODEL CHOICE</span></div><div><strong>YOURS</strong><span>TO REMIX</span></div></div></section>
+<footer><span>AFTERLIGHT © 2026</span><span>THE STORIES WE KEEP ARE NEVER REALLY GONE.</span></footer>
+</main>
+<script type="module" src="static/app.js"></script>
+</body></html>
